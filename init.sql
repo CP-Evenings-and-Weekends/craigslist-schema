@@ -1,0 +1,5 @@
+-- steps
+-- 1. Create the database
+-- 2. Connect to the database
+-- 3. Create the tables 
+-- 4. Insert data
