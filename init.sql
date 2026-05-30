@@ -1,5 +1,14 @@
--- steps
--- 1. Create the database
--- 2. Connect to the database
--- 3. Create the tables 
--- 4. Insert data
+-- This file runs against the default `postgres` database when the container
+-- first starts. Build your schema here, then `docker build` + `docker run`.
+--
+-- Typical pattern (see cars-database for a fuller example):
+--
+-- CREATE DATABASE craigslist;
+-- \connect craigslist
+--
+-- CREATE TABLE users (
+--   id SERIAL PRIMARY KEY,
+--   ...
+-- );
+--
+-- INSERT INTO users VALUES (...);
