@@ -19,7 +19,7 @@ Aim for the feature set Craigslist had at launch, not the version we have today.
 
 ### 1. Design the schema
 
-Sketch it out on paper or in [dbdiagram.io](https://dbdiagram.io/) / [Quick Database Diagrams](https://www.quickdatabasediagrams.com/) first.  Commit the diagram as `erd.png` (or as a Mermaid `erDiagram` block in `erd.md`).
+Sketch it out on paper or in [drawsql](https://drawsql.app/) first.  Commit the diagram as `erd.png` (or as a Mermaid `erDiagram` block in `erd.md`).
 
 You'll likely have at least: `users`, `ads`, `categories`, `locations`, and a join table for saved ads.
 
