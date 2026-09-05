@@ -25,7 +25,7 @@ You'll likely have at least: `users`, `ads`, `categories`, `locations`, and a jo
 
 ### 2. Implement in `init.sql`
 
-Translate your diagram into `CREATE TABLE` statements with primary keys, foreign keys, and appropriate constraints (`NOT NULL`, `UNIQUE`, `CHECK`).  Use the same conventions as cars-database (plural table names, lowercase, `id` primary keys, `_id` foreign keys).
+Translate your diagram into `CREATE TABLE` statements with primary keys, foreign keys, and appropriate constraints (`NOT NULL`, `UNIQUE`, `CHECK`).  Conventions for your tables: plural, lowercase table names (`users`, `orders`); an `id` primary key on every table; `_id` suffixes on foreign keys (`user_id`). (This is Django's convention — you'll meet it again in Module 5.)
 
 ### 3. Seed it with fake data
 
@@ -38,9 +38,11 @@ Either write `INSERT` statements by hand or generate fake data with [Mockaroo](h
 
 ```bash
 docker build -t craigslist_db .
-docker run --name craigslist --rm -e POSTGRES_PASSWORD=password -p 5454:5432 -d craigslist_db
-PGPASSWORD=password psql -h localhost -p 5454 -U postgres -d craigslist
+docker run --name pg_craigslist --rm -e POSTGRES_PASSWORD=password -p 5456:5432 -d craigslist_db
+PGPASSWORD=password psql -h localhost -p 5456 -U postgres -d craigslist
 ```
+
+(note the `5456` host port — the class cars-database claims `5454`, so both can run at once)
 
 Write 5+ queries that exercise your schema:
 - All ads in a given category
